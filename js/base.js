@@ -12,10 +12,14 @@ function addTextAreaCallback(textArea, callback, delay) {
     textArea = null;
 }
 
-function onloadComplete() {
-    // $("#src").on("keydown", src_onkeypress);
+$(document).ready(function() {
     addTextAreaCallback( document.getElementById("src"), src_onkeypress, 30 );
-}
+    $("#btnSample").click(function() {
+        fillSampleText();
+    });
+    new ClipboardJS("#btnCopy");
+});
+
 
 function fillSampleText() {
     // document.getElementById("src").value = "Hello JavaScript!";
@@ -30,18 +34,18 @@ function fillSampleText() {
 }
 
 function src_onchange() {
-    console.log("src_onchange();")
+    // console.log("src_onchange();")
     updateContent();
 }
 
 function src_onkeypress() {
-    console.log("src_onkeypress();")
+    // console.log("src_onkeypress();")
     updateContent();
 }
 
 function updateContent() {
     var text = document.getElementById("src").value;
-    console.log(text);
+    // console.log(text);
 
     var lines = text.split("\n");
     var paragraphs = [];
