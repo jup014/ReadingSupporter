@@ -70,7 +70,7 @@ function buildParagraphs(lines, paragraphs) {
             if (curParagraph == "") {
                 curParagraph = curline;
             } else {
-                paragraphs.push(curParagraph);
+                paragraphs.push(curParagraph.trim());
                 curParagraph = curline;
             }
         } else {
