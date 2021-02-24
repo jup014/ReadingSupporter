@@ -20,7 +20,7 @@ function onloadComplete() {
 function fillSampleText() {
     // document.getElementById("src").value = "Hello JavaScript!";
 
-    fetch("/txt/constitution.txt")
+    fetch("txt/constitution.txt")
         .then(response => response.text())
         .then((response) => {
             document.getElementById("src").value = response;
