@@ -85,6 +85,7 @@ function buildParagraphs(lines, paragraphs) {
             }
         }
     }
+    paragraphs.push(curParagraph.trim());
 }
 
 function isStartOfSentence(line) {
