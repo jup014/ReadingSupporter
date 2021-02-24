@@ -55,8 +55,16 @@ function updateContent() {
 
     buildParagraphs(lines, paragraphs);
 
-    // console.log(paragraphs);
-
+    // Remove AMA Style Citation
+    if ($("#chkRemoveAMACitation :checkbox")[0].checked) {
+        paragraphs.forEach(function(str, index) {
+            var newstr = str.replaceAll(/\.\s*[0-9]+\s/ig, ". ");
+            newstr = newstr.replaceAll(/\.\s*[0-9]+$/ig, ".");
+            newstr = newstr.replaceAll(/\,\s*[0-9]+\s/ig, ", ");
+            newstr = newstr.replaceAll(/\,\s*[0-9]+$/ig, ",");
+            this[index] = newstr;
+        }, paragraphs);
+    }
     
     // Outputs resultant paragraphs
     document.getElementById("tgt").innerHTML = "";
