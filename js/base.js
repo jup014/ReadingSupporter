@@ -17,6 +17,9 @@ $(document).ready(function() {
     $("#btnSample").click(function() {
         fillSampleText();
     });
+    $(".form-check :checkbox").change(function() {
+        updateContent();
+    });
     new ClipboardJS("#btnCopy");
 });
 
@@ -54,12 +57,16 @@ function updateContent() {
 
     // console.log(paragraphs);
 
+    
+    // Outputs resultant paragraphs
     document.getElementById("tgt").innerHTML = "";
     paragraphs.forEach(function(str) {
         var p = document.createElement("p");
         p.appendChild(document.createTextNode(str));
         document.getElementById("tgt").appendChild(p);
     });
+
+    
 }
 
 function buildParagraphs(lines, paragraphs) {
@@ -69,7 +76,7 @@ function buildParagraphs(lines, paragraphs) {
     // Paragraph Building
     for (var i = 0; i < lines.length; i++) {
         curline = lines[i];
-
+        
         if (isStartOfSentence(curline) && hasParagraphEnded(curParagraph)) {
             if (curParagraph == "") {
                 curParagraph = curline;
