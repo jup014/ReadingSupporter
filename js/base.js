@@ -68,12 +68,22 @@ function updateContent() {
     
     // Outputs resultant paragraphs
     document.getElementById("tgt").innerHTML = "";
-    paragraphs.forEach(function(str) {
-        var p = document.createElement("p");
-        p.appendChild(document.createTextNode(str));
-        document.getElementById("tgt").appendChild(p);
-    });
-
+    if ($("#chkBulletizeSentences :checkbox")[0].checked) {
+        var ul = document.createElement("ul");
+        ul.setAttribute("id", "tgtul");
+        document.getElementById("tgt").appendChild(ul);
+        paragraphs.forEach(function(str) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(str));
+            document.getElementById("tgtul").appendChild(li);
+        });    
+    } else {
+        paragraphs.forEach(function(str) {
+            var p = document.createElement("p");
+            p.appendChild(document.createTextNode(str));
+            document.getElementById("tgt").appendChild(p);
+        });    
+    }  
     
 }
 

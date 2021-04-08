@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Emoji Selector v0.0.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+    <script src="js/base_emoji.js"></script>
+
+    <style type="text/css">
+    .emoji {
+        min-width: 400px !important;
+        display: inline-block !important;
+        font-size: 30pt;
+        text-align: left;
+    }
+    .longcol {
+        height: 500px;
+    }
+    #emojipane {
+        max-width: 860px;
+        display: inline-block !important;
+    }
+    #parentpane {
+        position: relative;
+    }
+    #consolepane {
+        width: 400px;
+        height: 500px;
+        background: black;
+        color: white;
+        position: absolute; 
+        bottom: 0px;
+        right: 50px;
+        scrolling: true;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-3">Emoji Selction Tech Demo</h1>
+        <h3>When I say "I am going to exercise today", then my friend reacts like ...</h3>
+    </div>
+
+    
+    <div class="container corder">
+        <div class="border container container-lg-2" id="emojipane">
+            <div class="row row-fluid">
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-1">😀 Happy</label><br>
+                </div>
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-2">😖 Confounded</label><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-3">😆 Excited</label><br>
+                </div>
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-4">😫 Distraught</label><br>
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-5">😅 Embarrassed</label><br>
+                </div>
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-6">😭 Crying</label><br>
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-7">🤣 Hilarious</label><br>
+                </div>
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-8">😤 Angry</label><br>
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-9" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-9">🥲 Bittersweet</label><br>
+                </div>
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-10" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-10">🤬 More Angry</label><br>
+                </div>
+            </div>        
+            <div class="row">
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-11" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-11">😍 Lovely</label><br>
+                </div>
+                <div class="col">
+                    <input type="checkbox" class="btn-check" id="btn-check-12" autocomplete="off">
+                    <label class="btn btn-outline-primary emoji" for="btn-check-12">🤯 Furious</label><br>
+                </div>
+            </div>    
+        </div>
+        
+    </div>
+<div id="parentpane">
+        <div class="container" id="consolepane">
+            <pre id="consolemsg"></pre>
+        </div>
+    </div>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
